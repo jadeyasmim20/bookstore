@@ -26,6 +26,13 @@
                 >Inserir Livro</a
               >
             </div>
+            <input
+              id="myInput"
+              class="form-control me-2"
+              type="search"
+              placeholder="Buscar"
+              aria-label="Search"
+            />
           </div>
           <table class="table table-hover" id="itensLivrosBiblioteca">
             <thead>
@@ -35,7 +42,7 @@
               <th>Ano</th>
               <th>Editora</th>
             </thead>
-            <tbody>
+            <tbody id="myTable">
               <% livro_itens.forEach(function(livro) { %>
               <tr>
                 <td><%=livro.categoria %></td>

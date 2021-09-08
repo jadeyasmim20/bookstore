@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/livros', (req, res) => {
-  let consulta = Livros.find({ $exists: true }, (err, livro) => {
+  let consulta = Livros.find({}, (err, livro) => {
     if (err) return res.status(500).send('Erro ao consultar Livro');
 
     res.render('livros', { livro_itens: livro });
