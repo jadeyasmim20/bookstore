@@ -21,9 +21,6 @@
   </head>
 
   <body onload="getCookie()">
-    <!-- Button trigger modal -->
-    <a href="/" class="btn btn-info" role="button">logOut</a>
-
     <section class="container">
       <div class="row">
         <div class="col">
@@ -31,11 +28,7 @@
             <div class="col-6">
               <h1>Lista de livros</h1>
             </div>
-            <div class="col-6">
-              <a href="/cadastrarLivros" class="btn btn-primary btnEsconder"
-                >Inserir Livro</a
-              >
-            </div>
+
             <input
               id="myInput"
               class="form-control me-2"
@@ -60,18 +53,6 @@
                 <td><%=livro.autor %></td>
                 <td><%=livro.ano %></td>
                 <td><%=livro.editora %></td>
-                <td>
-                  <a
-                    href="/editarLivro/<%=livro._id  %>"
-                    class="btn btn-warning btnEsconder"
-                    >Editar</a
-                  >
-                  <a
-                    href="/deletarLivro/<%=livro._id  %>"
-                    class="btn btn-danger btnEsconder"
-                    >Deletar</a
-                  >
-                </td>
               </tr>
               <%}) %>
             </tbody>
